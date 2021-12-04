@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Schedule">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_c7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_c27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.27" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_c35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_c47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.47" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_c53"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.53" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_c72"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.72" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_c93"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93" />
+
+
+
+
+
+
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.40" />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.52" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.59" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.83" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r89"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r99"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.99" />
+
+<!--
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        app:layout_constraintBottom_toBottomOf="@id/guideline_r52"
+        app:layout_constraintEnd_toEndOf="@id/guideline_c93"
+        app:layout_constraintStart_toStartOf="@id/guideline_c7"
+        app:layout_constraintTop_toTopOf="@id/guideline_r10"
+         />
+
+    -->
+
+    <RadioGroup
+        android:id="@+id/Radio_Group_schedule"
+        android:layout_width="242dp"
+        android:layout_height="137dp"
+
+        app:layout_constraintBottom_toBottomOf="@id/guideline_r80"
+        app:layout_constraintEnd_toEndOf="@id/guideline_c93"
+        app:layout_constraintStart_toStartOf="@id/guideline_c35"
+        app:layout_constraintTop_toTopOf="@id/guideline_r55"
+
+
+        >
+
+        <RadioButton
+            android:id="@+id/radioButton_10am"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10 am" />
+
+        <RadioButton
+            android:id="@+id/radioButton_4pm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4 pm" />
+
+        <RadioButton
+            android:id="@+id/radioButton_7pm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="7 pm" />
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_schedule1hr"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:text="Schedule for 1-hour"
+
+        app:layout_constraintTop_toTopOf="@id/guideline_r89"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_r99"
+        app:layout_constraintStart_toStartOf="@id/guideline_c7"
+        app:layout_constraintEnd_toEndOf="@id/guideline_c47"
+
+
+        />
+
+    <Button
+        android:id="@+id/button_schedule2hr"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:text="Schedule for 2-hour"
+
+        app:layout_constraintTop_toTopOf="@id/guideline_r89"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_r99"
+        app:layout_constraintStart_toStartOf="@id/guideline_c53"
+        app:layout_constraintEnd_toEndOf="@id/guideline_c93"
+
+
+        />
+
+    <TextView
+        android:id="@+id/textview_Date"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:gravity="center"
+        android:textSize="25dp"
+        android:text="Date"
+
+        app:layout_constraintTop_toTopOf="@id/guideline_r10"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_r20"
+        app:layout_constraintStart_toStartOf="@id/guideline_c7"
+        app:layout_constraintEnd_toEndOf="@id/guideline_c27"
+
+        />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:ems="10"
+        android:inputType="number"
+
+        app:layout_constraintTop_toTopOf="@id/guideline_r10"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_r20"
+        app:layout_constraintStart_toStartOf="@id/guideline_c35"
+        app:layout_constraintEnd_toEndOf="@id/guideline_c93"
+
+        />
+
+    <TextView
+        android:id="@+id/textview_month"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:gravity="center"
+        android:textSize="25dp"
+        android:text="Month"
+
+        app:layout_constraintTop_toTopOf="@id/guideline_r20"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_r30"
+        app:layout_constraintStart_toStartOf="@id/guideline_c7"
+        app:layout_constraintEnd_toEndOf="@id/guideline_c27"
+
+        />
+
+    <EditText
+        android:id="@+id/editTextMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:ems="10"
+        android:inputType="number"
+
+        app:layout_constraintTop_toTopOf="@id/guideline_r20"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_r30"
+        app:layout_constraintStart_toStartOf="@id/guideline_c35"
+        app:layout_constraintEnd_toEndOf="@id/guideline_c93"
+
+        />
+
+
+    <TextView
+        android:id="@+id/textview_year"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:gravity="center"
+        android:textSize="25dp"
+        android:text="Year"
+
+        app:layout_constraintTop_toTopOf="@id/guideline_r30"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_r40"
+        app:layout_constraintStart_toStartOf="@id/guideline_c7"
+        app:layout_constraintEnd_toEndOf="@id/guideline_c27"
+
+        />
+
+    <EditText
+        android:id="@+id/editTextYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:ems="10"
+        android:inputType="number"
+
+        app:layout_constraintTop_toTopOf="@id/guideline_r30"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_r40"
+        app:layout_constraintStart_toStartOf="@id/guideline_c35"
+        app:layout_constraintEnd_toEndOf="@id/guideline_c93"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

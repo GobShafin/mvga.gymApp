@@ -3,11 +3,13 @@ package com.example.mvga;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Message;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class Dashboard extends AppCompatActivity {
     private Button ViewProfile,HireTrainers;
@@ -59,17 +61,44 @@ public class Dashboard extends AppCompatActivity {
         HireTrainers= (Button) findViewById(R.id.HireTrainers);
 
         db= new DBHelper(this);
-        ViewProfile.setOnClickListener(new View.OnClickListener() {
+        HireTrainers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String username=getIntent().getStringExtra("key_user");
-
-
                 Cursor res= db.getAllData(username);
-                /*String mail=res.getString(2);*/
+
+                while(res.moveToNext()){
+                    String pack= res.getString(4);
+                    if(pack.equals("Yearly")){
+
+                        //passing username to the hire trainer activity
+                        Intent intent= new Intent(getApplicationContext(), hire_trainer.class);
+                        intent.putExtra("key_user",username);
+                        startActivity(intent);
+
+                        //open hire trainer acitvity
+                        /*openActivity();*/
+                    }
+                    else{
+                        Toast.makeText(Dashboard.this, "Pay per view or Monthly package members can't book trainers!", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+
+
+
+                /*openActivity();*/
+            }
+        });
+
+        ViewProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String username=getIntent().getStringExtra("key_user");
+                Cursor res= db.getAllData(username);
 
                 int sum=sum(username);
-                /*String decry_mail=decrypt(mail,sum);*/
 
 
 
@@ -79,35 +108,46 @@ public class Dashboard extends AppCompatActivity {
                     return;
                 }
                 StringBuffer buffer=new StringBuffer();
-                
-
 
 
                 while(res.moveToNext()){
                     buffer.append("Username: "+ res.getString(0)+"\n" );
+
                     String mail=res.getString(2);
                     String decry_mail=decrypt(mail,sum);
                     buffer.append("Mail: "+decry_mail+"\n" );
                     buffer.append("Name: "+ res.getString(3)+"\n" );
+
                     buffer.append("Current package: "+ res.getString(4)+"\n" );
+                    String pack=res.getString(4);
 
                 }
 
                 showMsg("Profile",buffer.toString());
-
-
             }
         });
 
+
     }
+
+
+
+
     public void showMsg(String title, String message){
         AlertDialog.Builder builder= new AlertDialog.Builder(this);
         builder.setCancelable(true);
         builder.setTitle(title);
         builder.setMessage(message);
         builder.show();
-
-
-
     }
+
+    public void openActivity(){
+        Intent intent1= new Intent(this,hire_trainer.class);
+        startActivity(intent1);
+    }
+
+
+
+
+
 }

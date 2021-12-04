@@ -116,7 +116,7 @@
         app:layout_constraintGuide_percent=".54" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_R90"
+        android:id="@+id/guideline_R95"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -201,7 +201,7 @@
 
         android:text="Sign-up"
         app:layout_constraintTop_toTopOf="@id/guideline_R83"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_R90"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_R95"
         app:layout_constraintStart_toStartOf="@id/guideline_C39"
         app:layout_constraintEnd_toEndOf="@id/guideline_C61"/>
 

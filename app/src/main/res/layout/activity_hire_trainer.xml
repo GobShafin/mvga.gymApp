@@ -6,4 +6,228 @@
     android:layout_height="match_parent"
     tools:context=".hire_trainer">
 
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_c5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_c26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.26" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_c74"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.74" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_c99"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.99" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.32" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.47" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.49" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r64"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.64" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r94"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.94" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r98"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+
+    <TextView
+        android:id="@+id/Trainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List of trainers"
+        android:textSize="25dp"
+        android:textStyle="bold"
+
+
+        app:layout_constraintTop_toTopOf="@id/guideline_r3"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_r12"
+        app:layout_constraintStart_toStartOf="@id/guideline_c26"
+        app:layout_constraintEnd_toEndOf="@id/guideline_c74"
+
+        />
+
+
+    <RadioGroup
+        android:id="@+id/Radio_Group_trainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+
+        app:layout_constraintBottom_toBottomOf="@id/guideline_r85"
+        app:layout_constraintEnd_toEndOf="@id/guideline_c99"
+        app:layout_constraintStart_toStartOf="@id/guideline_c5"
+        app:layout_constraintTop_toTopOf="@id/guideline_r15"
+
+
+        >
+
+
+        <RadioButton
+            android:id="@+id/radioButton_t1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Trainer 1\n\nServices:\nFitness assessment\nHealth and fitness goal identification\nDesign of tailored exercise\n\n"
+
+            app:layout_constraintBottom_toBottomOf="@id/guideline_r30"
+            app:layout_constraintEnd_toEndOf="@id/guideline_c99"
+            app:layout_constraintStart_toStartOf="@id/guideline_c74"
+            app:layout_constraintTop_toTopOf="@id/guideline_r15" />
+
+        <RadioButton
+            android:id="@+id/radioButton_t2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Trainer 2\n\nServices:\nInstruction in how to safely perform exercises\nFitness assessment\n\n"
+
+            app:layout_constraintBottom_toBottomOf="@id/guideline_r47"
+            app:layout_constraintEnd_toEndOf="@id/guideline_c99"
+            app:layout_constraintStart_toStartOf="@id/guideline_c74"
+            app:layout_constraintTop_toTopOf="@id/guideline_r32"
+
+            />
+
+        <RadioButton
+            android:id="@+id/radioButton_t3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Trainer 3\n\nServices:\nFitness assessment\nHealth and fitness progress monitoring\nDesign of tailored exercise\n\n"
+
+            app:layout_constraintBottom_toBottomOf="@id/guideline_r64"
+            app:layout_constraintEnd_toEndOf="@id/guideline_c99"
+            app:layout_constraintStart_toStartOf="@id/guideline_c74"
+            app:layout_constraintTop_toTopOf="@id/guideline_r49"
+
+            />
+
+    </RadioGroup>
+
+
+
+    <Button
+        android:id="@+id/Next"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintTop_toTopOf="@id/guideline_r85"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_r94"
+        app:layout_constraintStart_toStartOf="@id/guideline_c26"
+        app:layout_constraintEnd_toEndOf="@id/guideline_c74"
+
+
+        android:text="Next" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

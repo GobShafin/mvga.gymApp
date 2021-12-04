@@ -94,7 +94,7 @@
         android:id="@+id/HireTrainers"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="Hire Trainers"
+        android:text="Book Trainers"
 
 
         android:textSize="13sp"

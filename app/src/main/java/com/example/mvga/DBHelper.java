@@ -18,6 +18,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase DB) {
         DB.execSQL("create Table Userdetails(username TEXT primary key,password TEXT,email TEXT,name TEXT,gym_package TEXT)");
+        DB.execSQL("create Table Trainer_details(username TEXT primary key,trainer_NameAndServices TEXT, curdate TEXT, month TEXT , year TEXT , time TEXT , duration TEXT )");
        // DB.execSQL("create Table Trainerdetails(trainername TEXT primary key, email TEXT)");
     }
 
@@ -41,6 +42,29 @@ public class DBHelper extends SQLiteOpenHelper {
         else
             return true;
     }
+
+    public Boolean insert_trainer_schedule(String username, String trainer_NameAndServices, String curdate, String month, String year, String time, String duration)
+    {
+        SQLiteDatabase DB= this.getWritableDatabase();
+        ContentValues contentValues= new ContentValues();
+        contentValues.put("username",username);
+        contentValues.put("trainer_NameAndServices",trainer_NameAndServices);
+        contentValues.put("curdate",curdate);
+        contentValues.put("month",month);
+        contentValues.put("year",year);
+        contentValues.put("time",time);
+        contentValues.put("duration",duration);
+
+        long result=DB.insert("Trainer_details", null, contentValues);
+
+        if(result==-1)
+            return false;
+        else
+            return true;
+    }
+
+
+
     public Boolean checkusername(String username){
         SQLiteDatabase DB=this.getWritableDatabase();
         Cursor cursor=DB.rawQuery("select * from Userdetails where username= ?", new String[]{username});
