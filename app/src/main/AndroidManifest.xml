@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MVGA">
-        <activity android:name=".Schedule"></activity>
+        <activity android:name=".Schedule" />
         <activity android:name=".hire_trainer" />
         <activity android:name=".dashboard_admin" />
         <activity android:name=".Dashboard" />

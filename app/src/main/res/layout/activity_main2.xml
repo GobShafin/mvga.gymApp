@@ -4,22 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:background="@drawable/bg"
+
+
     tools:context=".MainActivity">
 
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_C30"
+        android:id="@+id/guideline_C17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.3" />
+        app:layout_constraintGuide_percent="0.17" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_C70"
+        android:id="@+id/guideline_C83"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.7" />
+        app:layout_constraintGuide_percent="0.84" />
+
+
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_R5"
@@ -81,7 +88,7 @@
         app:layout_constraintGuide_percent=".32" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_R40"
+        android:id="@+id/guideline_R34"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -109,7 +116,7 @@
         app:layout_constraintGuide_percent="0.51" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_R55"
+        android:id="@+id/guideline_R35"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -127,14 +134,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
+        app:layout_constraintGuide_percent="0.61" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_R70"
+        android:id="@+id/guideline_R50"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.70" />
+        app:layout_constraintGuide_percent="0.66" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_R72"
@@ -148,7 +155,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.77" />
+        app:layout_constraintGuide_percent="0.73" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_R79"
@@ -158,11 +165,11 @@
         app:layout_constraintGuide_percent="0.79" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_R84"
+        android:id="@+id/guideline_R89"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.84" />
+        app:layout_constraintGuide_percent="0.89" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_C39"
@@ -217,6 +224,9 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/sbg"
+        android:textColor="@color/black"
+
 
         android:gravity="center"
         android:text="MVGA"
@@ -224,15 +234,17 @@
         android:textStyle="bold"
 
         app:layout_constraintBottom_toBottomOf="@id/guideline_R15"
-        app:layout_constraintEnd_toEndOf="@id/guideline_C70"
-        app:layout_constraintStart_toStartOf="@id/guideline_C30"
+        app:layout_constraintEnd_toEndOf="@id/guideline_C83"
+        app:layout_constraintStart_toStartOf="@id/guideline_C17"
         app:layout_constraintTop_toTopOf="@id/guideline_R5" />
 
     <TextView
         android:id="@+id/username"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:textColor="@color/black"
 
+        android:background="@drawable/sbg"
         android:textSize="15sp"
         android:gravity="center"
         android:text="Username:"
@@ -246,6 +258,8 @@
         android:id="@+id/mail"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:textColor="@color/black"
+        android:background="@drawable/sbg"
 
         android:textSize="15sp"
         android:gravity="center"
@@ -260,6 +274,8 @@
         android:id="@+id/name"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:textColor="@color/black"
+        android:background="@drawable/sbg"
 
         android:textSize="15sp"
         android:gravity="center"
@@ -268,18 +284,20 @@
         app:layout_constraintBottom_toBottomOf="@id/guideline_R58"
         app:layout_constraintEnd_toEndOf="@id/guideline_C36"
         app:layout_constraintStart_toStartOf="@id/guideline_C9"
-        app:layout_constraintTop_toTopOf="@id/guideline_R55" />
+        app:layout_constraintTop_toTopOf="@id/guideline_R35" />
 
     <TextView
         android:id="@+id/gym_package"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:textColor="@color/black"
+        android:background="@drawable/sbg"
 
         android:textSize="15sp"
         android:gravity="center"
         android:text="Package:"
 
-        app:layout_constraintBottom_toBottomOf="@id/guideline_R70"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_R50"
         app:layout_constraintEnd_toEndOf="@id/guideline_C36"
         app:layout_constraintStart_toStartOf="@id/guideline_C9"
         app:layout_constraintTop_toTopOf="@id/guideline_R65" />
@@ -288,6 +306,8 @@
         android:id="@+id/password"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:textColor="@color/black"
+        android:background="@drawable/sbg"
 
         android:textSize="15sp"
         android:gravity="center"
@@ -303,12 +323,14 @@
         android:id="@+id/login"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:textColor="@color/black"
+        android:background="@drawable/sbg"
 
         android:textSize="15sp"
         android:gravity="center"
         android:text="Confirm password:"
 
-        app:layout_constraintTop_toTopOf="@id/guideline_R40"
+        app:layout_constraintTop_toTopOf="@id/guideline_R34"
         app:layout_constraintBottom_toBottomOf="@id/guideline_R44"
         app:layout_constraintStart_toStartOf="@id/guideline_C9"
         app:layout_constraintEnd_toEndOf="@id/guideline_C36"  />
@@ -332,6 +354,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
+        android:background="@color/white"
 
 
         app:layout_constraintBottom_toBottomOf="@id/guideline_R25"
@@ -345,6 +368,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
+        android:background="@color/white"
 
 
         app:layout_constraintTop_toTopOf="@id/guideline_R27"
@@ -358,13 +382,14 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
+        android:background="@color/white"
 
 
         app:layout_constraintBottom_toBottomOf="@id/guideline_R44"
         app:layout_constraintEnd_toEndOf="@id/guideline_C90"
 
         app:layout_constraintStart_toStartOf="@id/guideline_C48"
-        app:layout_constraintTop_toTopOf="@id/guideline_R40"
+        app:layout_constraintTop_toTopOf="@id/guideline_R34"
          />
 
     <EditText
@@ -373,6 +398,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textEmailAddress"
+        android:background="@color/white"
 
         app:layout_constraintTop_toTopOf="@id/guideline_R46"
         app:layout_constraintBottom_toBottomOf="@id/guideline_R51"
@@ -385,61 +411,109 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
+        android:background="@color/white"
 
-        app:layout_constraintTop_toTopOf="@id/guideline_R55"
+
+
+        app:layout_constraintTop_toTopOf="@id/guideline_R35"
         app:layout_constraintBottom_toBottomOf="@id/guideline_R58"
         app:layout_constraintEnd_toEndOf="@id/guideline_C90"
         app:layout_constraintStart_toStartOf="@id/guideline_C48" />
-<RadioGroup
-    android:id="@+id/radio_group_Package"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:layout_constraintTop_toTopOf="@id/guideline_R65"
-    app:layout_constraintBottom_toBottomOf="@id/guideline_R83"
-    app:layout_constraintEnd_toEndOf="@id/guideline_C90"
-    app:layout_constraintStart_toStartOf="@id/guideline_C48"
-    >
-    <RadioButton
-        android:id="@+id/radioButton_PPV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pay Per View"
-        android:gravity="center"
 
+    <RadioGroup
+        android:id="@+id/radio_group_Package"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:background="@drawable/sbg"
 
-        app:layout_constraintTop_toTopOf="@id/guideline_R65"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_R70"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_R77"
         app:layout_constraintEnd_toEndOf="@id/guideline_C90"
-        app:layout_constraintStart_toStartOf="@id/guideline_C48"
+        app:layout_constraintStart_toStartOf="@id/guideline_C9"
+        app:layout_constraintTop_toTopOf="@id/guideline_R50"
+
+
+        >
+
+        <RadioButton
+            android:id="@+id/radioButton_PPV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Pay Per View"
+
+
+            app:layout_constraintBottom_toBottomOf="@id/guideline_R50"
+            app:layout_constraintEnd_toEndOf="@id/guideline_C90"
+            app:layout_constraintStart_toStartOf="@id/guideline_C48"
+            app:layout_constraintTop_toTopOf="@id/guideline_R65"
+
+            />
+
+        <RadioButton
+            android:id="@+id/radioButton_Monthly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Monthly"
+
+
+
+            app:layout_constraintBottom_toBottomOf="@id/guideline_R77"
+            app:layout_constraintEnd_toEndOf="@id/guideline_C90"
+            app:layout_constraintStart_toStartOf="@id/guideline_C48"
+            app:layout_constraintTop_toTopOf="@id/guideline_R72" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Yearly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Yearly"
+
+
+            app:layout_constraintBottom_toBottomOf="@id/guideline_R89"
+            app:layout_constraintEnd_toEndOf="@id/guideline_C90"
+            app:layout_constraintStart_toStartOf="@id/guideline_C48"
+            app:layout_constraintTop_toTopOf="@id/guideline_R79" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView81"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Card number"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:background="@drawable/sbg"
+
+
+        app:layout_constraintTop_toTopOf="@id/guideline_R77"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_R79"
+        app:layout_constraintStart_toStartOf="@id/guideline_C9"
+        app:layout_constraintEnd_toEndOf="@id/guideline_C36"
+
 
         />
 
-    <RadioButton
-        android:id="@+id/radioButton_Monthly"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Monthly"
-        android:gravity="center"
-
-
-        app:layout_constraintTop_toTopOf="@id/guideline_R72"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_R77"
-        app:layout_constraintEnd_toEndOf="@id/guideline_C90"
-        app:layout_constraintStart_toStartOf="@id/guideline_C48" />
-
-    <RadioButton
-        android:id="@+id/radioButton_Yearly"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Yearly"
-        android:gravity="center"
-
+    <EditText
+        android:id="@+id/editText_creditCardNumber"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:drawableRight="@drawable/icon_none"
+        android:ems="10"
+        android:inputType="phone"
+        android:background="@color/white"
+        android:text=""
 
         app:layout_constraintTop_toTopOf="@id/guideline_R79"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_R84"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_R89"
+        app:layout_constraintStart_toStartOf="@id/guideline_C9"
         app:layout_constraintEnd_toEndOf="@id/guideline_C90"
-        app:layout_constraintStart_toStartOf="@id/guideline_C48" />
-</RadioGroup>
+
+
+         />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

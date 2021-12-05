@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
+
     tools:context=".hire_trainer">
 
 
@@ -146,6 +148,8 @@
         android:text="List of trainers"
         android:textSize="25dp"
         android:textStyle="bold"
+        android:background="@drawable/sbg"
+        android:gravity="center"
 
 
         app:layout_constraintTop_toTopOf="@id/guideline_r3"
@@ -162,6 +166,9 @@
         android:layout_height="0dp"
 
 
+
+
+
         app:layout_constraintBottom_toBottomOf="@id/guideline_r85"
         app:layout_constraintEnd_toEndOf="@id/guideline_c99"
         app:layout_constraintStart_toStartOf="@id/guideline_c5"
@@ -176,6 +183,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:background="@drawable/sbg"
             android:text="Trainer 1\n\nServices:\nFitness assessment\nHealth and fitness goal identification\nDesign of tailored exercise\n\n"
 
             app:layout_constraintBottom_toBottomOf="@id/guideline_r30"
@@ -188,6 +196,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:background="@drawable/sbg"
             android:text="Trainer 2\n\nServices:\nInstruction in how to safely perform exercises\nFitness assessment\n\n"
 
             app:layout_constraintBottom_toBottomOf="@id/guideline_r47"
@@ -202,6 +211,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:background="@drawable/sbg"
             android:text="Trainer 3\n\nServices:\nFitness assessment\nHealth and fitness progress monitoring\nDesign of tailored exercise\n\n"
 
             app:layout_constraintBottom_toBottomOf="@id/guideline_r64"

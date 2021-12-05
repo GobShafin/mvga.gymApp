@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".Schedule">
 
 
@@ -164,6 +165,7 @@
         app:layout_constraintEnd_toEndOf="@id/guideline_c93"
         app:layout_constraintStart_toStartOf="@id/guideline_c35"
         app:layout_constraintTop_toTopOf="@id/guideline_r55"
+        android:background="@drawable/sbg"
 
 
         >
@@ -223,6 +225,7 @@
         android:id="@+id/textview_Date"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/sbg"
 
         android:gravity="center"
         android:textSize="25dp"
@@ -239,6 +242,7 @@
         android:id="@+id/editTextDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/white"
 
         android:gravity="center"
         android:ems="10"
@@ -255,6 +259,7 @@
         android:id="@+id/textview_month"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/sbg"
 
         android:gravity="center"
         android:textSize="25dp"
@@ -273,6 +278,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:ems="10"
+        android:background="@color/white"
         android:inputType="number"
 
         app:layout_constraintTop_toTopOf="@id/guideline_r20"
@@ -287,6 +293,7 @@
         android:id="@+id/textview_year"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/sbg"
 
         android:gravity="center"
         android:textSize="25dp"
@@ -303,6 +310,7 @@
         android:id="@+id/editTextYear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/white"
 
         android:gravity="center"
         android:ems="10"

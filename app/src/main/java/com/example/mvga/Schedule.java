@@ -135,12 +135,10 @@ public class Schedule extends AppCompatActivity {
                 else if(month<1 || month>12 ){
                     Toast.makeText(Schedule.this, "Invalid month!", Toast.LENGTH_SHORT).show();
                 }
-                else if(month==2){
-                    if(curdate>28){
+                else if(month==2 && (curdate<1 || curdate>28)){
                         Toast.makeText(Schedule.this, "Please choose another date!", Toast.LENGTH_SHORT).show();
-                    }
                 }
-                else if(curdate<1 || curdate>30 ){
+                else if(month!=2 && (curdate<1 || curdate>30) ){
                     Toast.makeText(Schedule.this, "Please choose another date!", Toast.LENGTH_SHORT).show();
                 }
 
@@ -154,15 +152,34 @@ public class Schedule extends AppCompatActivity {
                     System.out.println(curDate1);
                     System.out.println(Month1);
                     System.out.println(Year1);
+//String day, String month, String year, String time, String trainer_NameAndServices
+                    Boolean checkS = db.checkSchedule(curDate1, Month1, Year1, time1, trainer1);
+                    Boolean checkU_schedule=db.checkU_schedule(uname1);
 
+                    if(checkU_schedule==true){
+                        Toast.makeText(Schedule.this, "You already have a schedule!", Toast.LENGTH_SHORT).show();
 
-                    Boolean insert = db.insert_trainer_schedule(uname1, trainer1, curDate1, Month1, Year1, time1, duration1);
-
-                    if (insert = true) {
-                        Toast.makeText(Schedule.this, "Schedule successfully!", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(Schedule.this, "Schedule failed...", Toast.LENGTH_SHORT).show();
                     }
+                    else {
+
+                        if (checkS == true) {
+                            Toast.makeText(Schedule.this, "Trainer is not available! Please try different date and time.", Toast.LENGTH_SHORT).show();
+                        } else {
+
+
+                            Boolean insert = db.insert_trainer_schedule(uname1, trainer1, curDate1, Month1, Year1, time1, duration1);
+
+                            if (insert = true) {
+                                Toast.makeText(Schedule.this, "Schedule successfully!", Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(Schedule.this, "Schedule failed...", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    }
+
+
+
+
 
                 }
 
@@ -229,14 +246,35 @@ public class Schedule extends AppCompatActivity {
                     System.out.println(trainer2);
                     System.out.println(time2);
 
+                    Boolean checkS = db.checkSchedule(curDate2, Month2, Year2, time2, trainer2);
+                    Boolean checkU_schedule=db.checkU_schedule(uname2);
 
-                    Boolean insert = db.insert_trainer_schedule(uname2, trainer2, curDate2, Month2, Year2, time2, duration2);
+                    if(checkU_schedule==true){
+                        Toast.makeText(Schedule.this, "You already have a schedule!", Toast.LENGTH_SHORT).show();
 
-                    if (insert = true) {
-                        Toast.makeText(Schedule.this, "Schedule successfully!", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(Schedule.this, "Schedule failed...", Toast.LENGTH_SHORT).show();
                     }
+                    else {
+
+
+                        if (checkS == true) {
+                            Toast.makeText(Schedule.this, "Trainer is not available! Please try different date and time.", Toast.LENGTH_SHORT).show();
+                        } else {
+
+
+                            Boolean insert = db.insert_trainer_schedule(uname2, trainer2, curDate2, Month2, Year2, time2, duration2);
+
+                            if (insert = true) {
+                                Toast.makeText(Schedule.this, "Schedule successfully!", Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(Schedule.this, "Schedule failed...", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    }
+
+
+
+
+
 
                 }
 

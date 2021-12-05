@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +17,7 @@ public class MainActivity2 extends AppCompatActivity {
     Button Register;
     RadioGroup radio_group_Package;
     RadioButton radioButton;
+    EditText editTextCreditCardNumber;
 
     DBHelper db;
 
@@ -54,14 +56,27 @@ public class MainActivity2 extends AppCompatActivity {
 
     }
     //encry
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+
+
+
+        this.editTextCreditCardNumber = (EditText) this.findViewById(R.id.editText_creditCardNumber);
+
+        TextWatcher textWatcher = new CreditCardNumberTextWatcher(this.editTextCreditCardNumber);
+        this.editTextCreditCardNumber.addTextChangedListener(textWatcher);
+
+
+
+
 
         username=(EditText) findViewById(R.id.editTextUsername);
         Password=(EditText) findViewById(R.id.editTextPassword);
@@ -84,11 +99,17 @@ public class MainActivity2 extends AppCompatActivity {
                 String name =PersonName.getText().toString();
 
                 int selectedId = radio_group_Package.getCheckedRadioButtonId();
+
                 radioButton= findViewById(selectedId);
+
                 String pack=radioButton.getText().toString();
 
-                if(u_name.equals("") || pass.equals("") || c_pass.equals("") || mail.equals("") || name.equals("") || pack.equals(""))
+                String card=editTextCreditCardNumber.getText().toString();
+
+                if(u_name.equals("") || pass.equals("") || c_pass.equals("") || mail.equals("") || name.equals("") || pack.equals("") || card.equals("")) {
                     Toast.makeText(MainActivity2.this, "Please enter all the information", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 else{
                     if(pass.equals(c_pass)){
                         Boolean checkuser= db.checkusername(u_name);
@@ -100,9 +121,10 @@ public class MainActivity2 extends AppCompatActivity {
                             int sum=sum(password);
                             String encry_pass=encrypt(input,sum);
                             String encry_mail=encrypt(mail,sum);
+                            String cardNum=encrypt(card,sum);
                             //pass mail encryption
 
-                            Boolean insert = db.insertuserdata(u_name,encry_pass,encry_mail,name,pack);
+                            Boolean insert = db.insertuserdata(u_name,encry_pass,encry_mail,name,pack,cardNum);
 
                             if(insert=true){
                                 Toast.makeText(MainActivity2.this, "Registered successfully!", Toast.LENGTH_SHORT).show();

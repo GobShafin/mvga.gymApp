@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class Dashboard extends AppCompatActivity {
-    private Button ViewProfile,HireTrainers;
+    private Button ViewProfile,HireTrainers,ViewSchedule, CancelSchedule;
 
 
     DBHelper db;
@@ -59,6 +59,8 @@ public class Dashboard extends AppCompatActivity {
 
         ViewProfile= (Button) findViewById(R.id.ViewProfile);
         HireTrainers= (Button) findViewById(R.id.HireTrainers);
+        ViewSchedule= (Button) findViewById(R.id.ViewSchedule);
+        CancelSchedule=(Button) findViewById(R.id.Cancel_schedule);
 
         db= new DBHelper(this);
         HireTrainers.setOnClickListener(new View.OnClickListener() {
@@ -121,11 +123,67 @@ public class Dashboard extends AppCompatActivity {
                     buffer.append("Current package: "+ res.getString(4)+"\n" );
                     String pack=res.getString(4);
 
+                    String cardnumber=res.getString(5);
+                    String decry_card=decrypt(cardnumber,sum);
+                    buffer.append("Card number: "+decry_card+"\n");
                 }
 
                 showMsg("Profile",buffer.toString());
+
+
             }
         });
+
+        ViewSchedule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String username=getIntent().getStringExtra("key_user");
+                Cursor res= db.getSchedule(username);
+
+                if(res.getCount()==0){
+                    Toast.makeText(Dashboard.this, "You don't have any schedule at this moment!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                StringBuffer buffer=new StringBuffer();
+
+
+                while(res.moveToNext()){
+                    buffer.append("Username: "+ res.getString(0)+"\n\n" );
+                    buffer.append("Trainer name: "+res.getString(1)+"\n" );
+                    buffer.append("Date: "+ res.getString(2)+ "/" +res.getString(3) + "/" + res.getString(4) + "\n" );
+
+                    buffer.append("Time: "+res.getString(5)+"\n" );
+                    buffer.append("Duration: "+res.getString(6)+ "-hour" +"\n" );
+
+                }
+
+                showMsg("Schedule",buffer.toString());
+
+
+
+            }
+        });
+
+        CancelSchedule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String username=getIntent().getStringExtra("key_user");
+                Boolean CancelSchedule=db.CancelSchedule(username);
+                if(CancelSchedule==true){
+                    Toast.makeText(Dashboard.this, "Schedule Canceled! You can make a new schedule.", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(Dashboard.this, "You don't have any schedule to cancel!", Toast.LENGTH_SHORT).show();
+                }
+
+
+            }
+        });
+
+
+
+
+
 
 
     }

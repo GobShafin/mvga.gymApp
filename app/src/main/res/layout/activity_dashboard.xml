@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
+
     tools:context=".dashboard_admin">
 
 
@@ -30,11 +32,32 @@
 
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_R30"
+        android:id="@+id/guideline_R10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_R20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_R25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_R35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_R40"
@@ -44,11 +67,11 @@
         app:layout_constraintGuide_percent="0.40" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_R45"
+        android:id="@+id/guideline_R50"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_percent="0.50" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_R55"
@@ -58,18 +81,12 @@
         app:layout_constraintGuide_percent="0.55" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_R60"
+        android:id="@+id/guideline_R65"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.60" />
+        app:layout_constraintGuide_percent="0.65" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_R70"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.70" />
 
 
 
@@ -83,8 +100,8 @@
 
 
         android:textSize="13sp"
-        app:layout_constraintTop_toTopOf="@id/guideline_R30"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_R40"
+        app:layout_constraintTop_toTopOf="@id/guideline_R10"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_R20"
         app:layout_constraintStart_toStartOf="@id/guideline_C37"
         app:layout_constraintEnd_toEndOf="@id/guideline_C67"
         />
@@ -99,10 +116,40 @@
 
         android:textSize="13sp"
 
-        app:layout_constraintTop_toTopOf="@id/guideline_R45"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_R55"
+        app:layout_constraintTop_toTopOf="@id/guideline_R25"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_R35"
         app:layout_constraintStart_toStartOf="@id/guideline_C37"
         app:layout_constraintEnd_toEndOf="@id/guideline_C67"
+
+        />
+
+    <Button
+        android:id="@+id/ViewSchedule"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="View Schedule"
+
+
+        android:textSize="13sp"
+
+        app:layout_constraintTop_toTopOf="@id/guideline_R40"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_R50"
+        app:layout_constraintStart_toStartOf="@id/guideline_C37"
+        app:layout_constraintEnd_toEndOf="@id/guideline_C67"
+
+        />
+
+    <Button
+        android:id="@+id/Cancel_schedule"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Cancel Schedule"
+
+        app:layout_constraintTop_toTopOf="@id/guideline_R55"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_R65"
+        app:layout_constraintStart_toStartOf="@id/guideline_C37"
+        app:layout_constraintEnd_toEndOf="@id/guideline_C67"
+
 
         />
 

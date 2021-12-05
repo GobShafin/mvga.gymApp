@@ -30,42 +30,42 @@
 
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_R30"
+        android:id="@+id/guideline_R10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.3" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_R40"
+        android:id="@+id/guideline_R20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.40" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_R45"
+        android:id="@+id/guideline_R25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.45" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_R55"
+        android:id="@+id/guideline_R35"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.55" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_R60"
+        android:id="@+id/guideline_R40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.60" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_R70"
+        android:id="@+id/guideline_R50"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -83,8 +83,8 @@
 
 
         android:textSize="13sp"
-        app:layout_constraintTop_toTopOf="@id/guideline_R30"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_R40"
+        app:layout_constraintTop_toTopOf="@id/guideline_R10"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_R20"
         app:layout_constraintStart_toStartOf="@id/guideline_C37"
         app:layout_constraintEnd_toEndOf="@id/guideline_C67"
         />
@@ -98,8 +98,8 @@
 
         android:textSize="13sp"
 
-        app:layout_constraintTop_toTopOf="@id/guideline_R45"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_R55"
+        app:layout_constraintTop_toTopOf="@id/guideline_R25"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_R35"
         app:layout_constraintStart_toStartOf="@id/guideline_C37"
         app:layout_constraintEnd_toEndOf="@id/guideline_C67"
         />
@@ -113,8 +113,8 @@
 
         android:textSize="13sp"
 
-        app:layout_constraintTop_toTopOf="@id/guideline_R60"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_R70"
+        app:layout_constraintTop_toTopOf="@id/guideline_R40"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_R50"
         app:layout_constraintStart_toStartOf="@id/guideline_C37"
         app:layout_constraintEnd_toEndOf="@id/guideline_C67"
 
