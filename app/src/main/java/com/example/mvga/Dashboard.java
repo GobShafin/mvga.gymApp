@@ -71,7 +71,7 @@ public class Dashboard extends AppCompatActivity {
 
                 while(res.moveToNext()){
                     String pack= res.getString(4);
-                    if(pack.equals("Yearly")){
+                    if(pack.equals("Yearly") || pack.equals("Monthly")){
 
                         //passing username to the hire trainer activity
                         Intent intent= new Intent(getApplicationContext(), hire_trainer.class);
@@ -82,7 +82,7 @@ public class Dashboard extends AppCompatActivity {
                         /*openActivity();*/
                     }
                     else{
-                        Toast.makeText(Dashboard.this, "Pay per view or Monthly package members can't book trainers!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Dashboard.this, "Pay per view package members can't book trainers!", Toast.LENGTH_SHORT).show();
                     }
                 }
 
